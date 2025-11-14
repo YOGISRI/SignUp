@@ -8,4 +8,22 @@ function signup(userName) {
     return "Signup Successful, Please Login";
 }
 
-module.exports = { signup, usernames };
+function login(userName, password) {
+    
+    const correctPassword = "Emp@123";
+
+    
+    if (!usernames.includes(userName)) {
+        return "User Not Found, Please Signup";
+    }
+
+    
+    if (password !== correctPassword) {
+        return "Wrong Password";
+    }
+
+    
+    return "Login Successful";
+}
+
+module.exports = { signup, login, usernames };
